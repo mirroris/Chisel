@@ -1,3 +1,5 @@
+package Main;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,5 +20,10 @@ public class Main {
 		}
 		scanner.close();
 	}
+	
 
+	static boolean isNum(char n) {
+		if( n>='0' && n<='9')return true;
+		else return false;
+	}
 }

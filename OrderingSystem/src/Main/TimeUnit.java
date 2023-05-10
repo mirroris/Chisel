@@ -1,3 +1,4 @@
+package Main;
 import java.util.ArrayList;
 
 public class TimeUnit {
@@ -12,8 +13,8 @@ public class TimeUnit {
 	
 	public int nextStep() {
 		int res = 0;
-		while(index<line.length() && !isNum(line.charAt(index))) index++;
-		while(index<line.length() && isNum(line.charAt(index))) {
+		while(index<line.length() && !Main.isNum(line.charAt(index))) index++;
+		while(index<line.length() && Main.isNum(line.charAt(index))) {
 			res = res*10 + (line.charAt(index)-'0');
 			index++;
 		}
@@ -43,8 +44,4 @@ public class TimeUnit {
 		return res;
 	}
 	
-	static boolean isNum(char n) {
-		if( n>='0' && n<='9')return true;
-		else return false;
-	}
 }
