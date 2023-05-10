@@ -2,12 +2,14 @@ package Main;
 import java.util.ArrayList;
 
 public class Query {
-	private int id;
+	protected int id;
 	protected ArrayList<String> target;
-	
+	protected String personName;
 	public Query(String str){
+		parseOrder(str);
 		target = new ArrayList<String>();
 		id = Integer.parseInt(target.get(0));
+		personName = target.get(1);
 	}
 	
 	ArrayList<String> parseOrder(String str) {

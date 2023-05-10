@@ -6,8 +6,19 @@ public class BuyQuery extends Query{
 	
 	public BuyQuery(String str) {
 		super(str);
-		begin = new TimeUnit(target.get(1));
-		num = Integer.parseInt(target.get(2));
+		begin = new TimeUnit(target.get(2));
+		num = Integer.parseInt(target.get(3));
 	}	
 	
+	public int getTime() {
+		return begin.toMsec();
+	}
+	
+	public int getNum() {
+		return num;
+	}
+	
+	public String getPersonName() {
+		return personName;
+	}
 }
