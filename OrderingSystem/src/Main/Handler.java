@@ -39,13 +39,14 @@ public class Handler {
 	
 	static void complete(OrderQuery q) {
 		
+		return;
 	}
 	
 	static void complete(NoteQuery q) {
-		
+		return;
 	}
 	
 	static void complete(ArrivalQuery q) {
-		
+		return;
 	}
 }

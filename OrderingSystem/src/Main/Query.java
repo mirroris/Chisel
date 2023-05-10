@@ -12,7 +12,6 @@ public class Query {
 	
 	ArrayList<String> parseOrder(String str) {
 		int i = 0;
-		int id = 0;
 		int n = str.length();
 		String elem = null;
 		ArrayList<String> res = new ArrayList<>();
