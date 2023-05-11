@@ -1,8 +1,5 @@
 package Main;
 
-<<<<<<< HEAD
-=======
-import java.util.ArrayList;
 
 /*
  * types of queries
@@ -13,7 +10,6 @@ import java.util.ArrayList;
  * 
  * */
 
->>>>>>> 1cb74b2627c07d36a98a52c5b2b296b28e5b5856
 import java.util.Scanner;
 
 public class Main {
