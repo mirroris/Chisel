@@ -4,6 +4,8 @@ import java.util.ArrayList;
 public class Query {
 	protected int id;
 	protected ArrayList<String> target;
+	protected TimeUnit time;
+	
 	public Query(String str){
 		parseOrder(str);
 		target = new ArrayList<String>();

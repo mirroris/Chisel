@@ -1,7 +1,6 @@
 package Main;
 
 public class BuyQuery extends Query{
-	private TimeUnit begin;
 	int foodNum;
 	String foodName;
 	String personName;
@@ -11,11 +10,11 @@ public class BuyQuery extends Query{
 		personName = target.get(1);
 		foodName = target.get(2);
 		foodNum = Integer.parseInt(target.get(3));
-		begin = new TimeUnit(target.get(4));
+		time = new TimeUnit(target.get(4));
 	}	
 	
 	public int getTime() {
-		return begin.toMsec();
+		return time.toMsec();
 	}
 	
 	public String getFoodName() {

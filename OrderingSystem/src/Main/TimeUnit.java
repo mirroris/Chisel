@@ -5,10 +5,17 @@ public class TimeUnit {
 	private String line;
 	private int index;
 	private final int UNIT = 60;
+	ArrayList<Integer> timeSlice;
 	
 	public TimeUnit(String str) {
 		index = 0;
 		line = str;
+		ArrayList<Integer> timeSlice = new ArrayList<Integer>();
+		while(index<line.length()) {
+			timeSlice.add(nextStep()); 
+		}
+		
+		index = 0;
 	}
 	
 	public int nextStep() {
@@ -21,20 +28,12 @@ public class TimeUnit {
 		return res;
 	}
 	
-	public ArrayList<Integer> parseInt() {
-		int reg = index;
-		index = 0;
-		ArrayList<Integer> res = new ArrayList<Integer>();
-		while(index<line.length()) {
-			res.add(nextStep()); 
-		}
-		
-		index = reg;
-		return res;
+	public ArrayList<Integer> getTimeSlice() {
+		return timeSlice;
 	}
 	
 	public int toMsec() {	
-		ArrayList<Integer> sub = parseInt();
+		ArrayList<Integer> sub = getTimeSlice();
 		int res = 0;
 		int hourUnit = UNIT*UNIT;
 		for(int x: sub) {
@@ -44,4 +43,17 @@ public class TimeUnit {
 		return res;
 	}
 	
+	public void procTime(TimeUnit addTime) {
+		ArrayList<Integer> tar = getTimeSlice();
+		ArrayList<Integer> sub = addTime.getTimeSlice();
+		int c = 0;
+		for(int i=tar.size()-1;i>=0;i--) {
+			int x = sub.get(i) + c;
+			if(x>=UNIT) {
+				tar.add(0, x%UNIT);
+				c++;
+			}else tar.add(0, x);
+		}
+		return; 
+	}
 }
