@@ -7,11 +7,15 @@ public class Handler {
 	private Map<String, Integer> menu;
 	private Map<String, String> orderWhat;
 	private Map<String, Integer> orderWhen;
+	private Map<String, Integer> orderHowmany;
+	private Map<String, Integer> orderSum;
+	private Map<String, Queue<String>> orderWho;
 	
 	public Handler(){
 		menu = new HashMap<String, Integer>();
 		orderWhat = new HashMap<String, String>();
 		orderWhen = new HashMap<String, Integer>();
+		orderWho = new HashMap<String, LinkedList<String>>();
 	}
 
 	public void menuAdd(String s, int i) {
@@ -38,7 +42,9 @@ public class Handler {
 	}
 	
 	static void complete(OrderQuery q) {
-		
+		String foodName = q.getFoodName();
+		int sum = orderSum.
+		while()
 		return;
 	}
 	
