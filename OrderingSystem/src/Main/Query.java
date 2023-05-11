@@ -10,19 +10,20 @@ public class Query {
 		parseOrder(str);
 		target = new ArrayList<String>();
 		id = Integer.parseInt(target.get(0));
-	}
-	
-	ArrayList<String> parseOrder(String str) {
+		
 		int i = 0;
 		int n = str.length();
 		String elem = null;
-		ArrayList<String> res = new ArrayList<>();
+		ArrayList<String> target = new ArrayList<>();
 		while(i<n && Main.isNum(str.charAt(i))) {
 			while(i<n && str.charAt(i)==' ') i++;
 			while(i<n && str.charAt(i)!=' ') elem+=str.charAt(i);
-			res.add(elem);
+			target.add(elem);
 		}
-		return res;
+	}
+	
+	ArrayList<String> getTarget() {
+		return target;
 	}
 	
 	int getId() {

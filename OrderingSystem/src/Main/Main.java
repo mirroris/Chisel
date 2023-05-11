@@ -1,6 +1,16 @@
 package Main;
 
 import java.util.ArrayList;
+
+/*
+ * types of queries
+ * 1. who what howmany when
+ * 2. what howmany when
+ * 3. what when 
+ * 4. who 
+ * 
+ * */
+
 import java.util.Scanner;
 
 public class Main {
@@ -23,6 +33,7 @@ public class Main {
 					break;
 				case '2':
 					handler.complete(new OrderQuery(line));
+					
 					break;
 				case '3':
 					handler.complete(new ArrivalQuery(line));
